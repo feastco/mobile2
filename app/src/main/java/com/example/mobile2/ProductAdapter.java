@@ -34,7 +34,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Product product = productList.get(position);
         holder.tvMerk.setText(product.getMerk());
-        holder.tvHarga.setText(String.format("Rp %, .0f", product.getHarga()));
+
+        // Format harga dengan benar
+        holder.tvHarga.setText(String.format("Rp %,d", (int) product.getHarga()));
+
         holder.tvStok.setText("Stok: " + product.getStok());
 
         Glide.with(context)

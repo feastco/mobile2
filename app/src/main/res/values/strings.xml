@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Mobile 2</string>
+        <string name="cart_icon_desc">Add to Cart</string>
+        <string name="detail_icon_desc">View Details</string>
 </resources>
